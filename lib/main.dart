@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:riverpod_getting_started/services/navigation_service.dart';
-
-import 'features/01_home/views/my_home_page.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'features/00_home/views/my_home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Riverpod'),
+      home: MyHomePage(),
     );
   }
 }

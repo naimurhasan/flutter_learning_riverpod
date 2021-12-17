@@ -4,6 +4,9 @@
  I'm exploring the popular riverpod
  state manegment solution.
 
+My Main Source of Understanding the different provider is,
+[riverpod-state-management-explained](https://www.refactord.com/guides/riverpod-state-management-explained)
+
 ## Want to Getting Start With Flutter
 
 This project is a starting point for a Flutter application.

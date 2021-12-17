@@ -7,12 +7,14 @@ import 'package:riverpod_getting_started/widgets/m_scaffold.dart';
 
 
 class CounterScreen extends ConsumerWidget {
-  const CounterScreen({Key? key}) : super(key: key);
+  final String title;
+  const CounterScreen(this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, ScopedReader watch) {
     final count = watch(counterProvider).count;
     return MScaffold(
+      title: title,
       body: Column(
         children: [
           Text(count.toString()),

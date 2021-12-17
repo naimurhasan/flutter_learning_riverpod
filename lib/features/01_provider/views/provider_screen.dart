@@ -4,11 +4,13 @@ import 'package:riverpod_getting_started/widgets/m_scaffold.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ProviderScreen extends StatelessWidget {
-  const ProviderScreen({Key? key}) : super(key: key);
+  final String title;
+  const ProviderScreen(this.title, {Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MScaffold(
+      title: title,
         body: Center(
           // access the global variables pool
           child: Consumer(builder: (context, watch, _) {

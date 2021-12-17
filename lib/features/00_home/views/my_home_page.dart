@@ -9,11 +9,12 @@ import 'package:riverpod_getting_started/widgets/m_scaffold.dart';
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key,}) : super(key: key);
 
+  // (Future) refactor will change this with route generator;
   final List<SubScreen> screens = [
-    SubScreen("Provider", ProviderScreen()),
-    SubScreen("State Provider", StateProviderScreen()),
-    SubScreen("Change Notifier (Counter)", CounterScreen()),
-    SubScreen("Sate Notifier Provider (Todo)", TodoScreen()),
+    SubScreen("Provider", (name) => ProviderScreen(name)),
+    SubScreen("State Provider", (name) => StateProviderScreen(name)),
+    SubScreen("Change Notifier (Counter)", (name) =>  CounterScreen(name)),
+    SubScreen("Sate Notifier Provider (Todo)", (name) =>  TodoScreen(name)),
   ];
 
   @override

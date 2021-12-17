@@ -5,12 +5,14 @@ import 'package:riverpod_getting_started/widgets/m_scaffold.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class TodoScreen extends ConsumerWidget {
-  const TodoScreen({Key? key}) : super(key: key);
+  final String title;
+  const TodoScreen(this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, ScopedReader watch) {
     final todoList = watch(todoListProvider);
     return MScaffold(
+      title: title,
       body: ListView.builder(
             itemCount: todoList.length,
             itemBuilder: (BuildContext context, int index) {

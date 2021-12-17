@@ -4,7 +4,8 @@ import 'package:riverpod_getting_started/widgets/m_scaffold.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class StateProviderScreen extends ConsumerWidget {
-  const StateProviderScreen({Key? key}) : super(key: key);
+  final String title;
+  const StateProviderScreen(this.title, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, ScopedReader watch) {
@@ -15,6 +16,7 @@ class StateProviderScreen extends ConsumerWidget {
     final isRed = context.read(selectedButtonProvider).state == 'red';
 
     return MScaffold(
+      title: title,
       body: Column(
         children: [
           Text(selectedButton),

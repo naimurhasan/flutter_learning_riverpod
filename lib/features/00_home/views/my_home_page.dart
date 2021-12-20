@@ -4,6 +4,8 @@ import 'package:riverpod_getting_started/features/01_provider/views/provider_scr
 import 'package:riverpod_getting_started/features/02_state_providers/views/state_provider_screen.dart';
 import 'package:riverpod_getting_started/features/03_change_notifier_dcounter/views/counter_screen.dart';
 import 'package:riverpod_getting_started/features/04_state_notifier_provider_dtodo/views/todo_screen.dart';
+import 'package:riverpod_getting_started/features/05_stream_provider_dtimer/views/stream_provider_screen.dart';
+import 'package:riverpod_getting_started/features/06_future_provider_dhttp/views/future_provider_screen.dart';
 import 'package:riverpod_getting_started/widgets/m_scaffold.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -15,12 +17,14 @@ class MyHomePage extends StatelessWidget {
     SubScreen("State Provider", (name) => StateProviderScreen(name)),
     SubScreen("Change Notifier (Counter)", (name) =>  CounterScreen(name)),
     SubScreen("Sate Notifier Provider (Todo)", (name) =>  TodoScreen(name)),
+    SubScreen("StreamProvider (Counter)", (name) =>  StreamProviderScreen(name)),
+    SubScreen("FutureProvider (Http)", (name) =>  FutureProviderScree(name)),
   ];
 
   @override
   Widget build(BuildContext context) {
     return MScaffold(
-        body: Column(
+        body: ListView(
           children: [
             for(int i = 0; i<screens.length; i++)
               Card(child: ListTile(title: Text(screens[i].title), onTap: screens[i].onTap,)),

@@ -4,6 +4,8 @@
  I'm exploring the popular riverpod
  state manegment solution.
 
+![screenshot](screenshot.png)
+
 My Main Source of Understanding the different provider is,
 [riverpod-state-management-explained](https://www.refactord.com/guides/riverpod-state-management-explained)
 
